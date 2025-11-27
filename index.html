@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Educação Ambiental</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Educação Ambiental</h1>
+    </header>
+
+  <section class="hero" id="inicio" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200'); background-size:cover; background-position:center;">
+    <h2 style="backdrop-filter: blur(3px); background: rgba(0,0,0,0.3); padding:10px; border-radius:8px;">Bem-vindo ao nosso site"</h2>
+  
+  </section>
+
+  <section class="flyer-container">
+    <img src="flyer.png" alt="Flyer" width="40" height="350">
+  </section>
+
+  <section class="podcast-container">
+    <h2> Podcast Ambiental</h2>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">
+      Seu navegador não suporta o áudio.
+    </audio>
+  </section>
+
+  <section class="cards-container">
+    <div class="card" data-modal="modal-lei">
+      <img src="https://img.icons8.com/color/96/law.png" class="icon" alt="Lei">
+      <h3>Lei</h3>
+    </div>
+
+    <div class="card" data-modal="modal-educacao">
+      <img src="https://img.icons8.com/color/96/learning.png" class="icon">
+      <h3>Educação Ambiental</h3>
+    </div>
+
+    <div class="card" data-modal="modal-prevencao">
+      <img src="https://img.icons8.com/color/96/leaf.png" class="icon">
+      <h3>Prevenção</h3>
+    </div>
+
+    <div class="card" data-modal="modal-reciclagem" id="reciclagem">
+      <img src="https://img.icons8.com/emoji/96/recycling-symbol-emoji.png" class="icon" alt="Reciclagem Emoji">
+      <h3>Reciclagem</h3>
+</div>
+  </section>
+
+  <!-- MODAIS -->
+  <div class="modal" id="modal-lei">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <h2>Lei</h2>
+      <p>As leis ambientais são responsáveis por regulamentar o uso dos recursos naturais e proteger áreas de preservação. Elas combatem o desmatamento ilegal, estabelecem punições para crimes ambientais e orientam políticas de recuperação de áreas degradadas. Sem essas leis, o avanço da exploração descontrolada colocaria em risco diversos biomas, espécies e o equilíbrio climático global.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-educacao">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+     
+      <h2>Educação Ambiental</h2>
+      <p>A educação ambiental é essencial para formar cidadãos conscientes sobre a importância de preservar o meio ambiente. Ela incentiva práticas sustentáveis, promove o respeito à natureza e desenvolve o senso de responsabilidade com as futuras gerações. Além disso, ajuda a combater o desmatamento ao ensinar como pequenas atitudes individuais podem gerar grandes impactos positivos no planeta.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-prevencao">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+     
+      <h2>Prevenção</h2>
+      <p>A prevenção do desmatamento envolve ações estratégicas como fiscalização intensiva, monitoramento por satélite, campanhas de conscientização e incentivos a práticas agrícolas sustentáveis. É também fundamental promover o reflorestamento, restaurar áreas degradadas e incentivar o consumo consciente, garantindo a proteção dos ecossistemas e mantendo o equilíbrio ambiental.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-reciclagem">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <h2>Reciclagem</h2>
+    <p>A reciclagem reduz significativamente o impacto ambiental ao transformar materiais descartados em novos produtos. Esse processo diminui a extração de matérias-primas, reduz o acúmulo de lixo e economiza energia. Quanto mais reciclamos, menos pressionamos as florestas, rios e solos, ajudando a combater o desmatamento e contribuindo para um planeta mais sustentável.</p>
+  </div>
+</div>
+</div>
+  </div>
+
+  <footer>
+    <p>Desenvolvido por Caroline, Maria Freitas, Evelyn e Lucas. Estudantes Instituto Federal Catarinense Campus Fraiburgo. Todos os direitos reservardos, 2025.
+  </footer>
+
+  <script src="script.js"></script>
+
+  <img src="terra1.gif" style="position: fixed; bottom: 20px; right: 20px; width: 120px; z-index: 999;">
+</body>
+</html>

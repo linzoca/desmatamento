@@ -1,0 +1,162 @@
+/* básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f9f1; color: #222; line-height: 1.5; }
+
+/* header */
+header { background: linear-gradient(90deg,#2e7d32,#4caf50); color: #fff; padding: 18px 10px; text-align: center; }
+header h1 { margin-bottom: 8px; font-size: 1.8rem; }
+nav ul { list-style: none; display:flex; justify-content:center; gap:18px; padding: 6px 0; }
+nav ul li a { color:#fff; text-decoration:none; font-weight:700; }
+nav ul li a:hover { color:#c8e6c9; text-decoration: underline; }
+
+/* hero */
+.hero { padding: 48px 16px; text-align:center; background-image:url('https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=1200&auto=format&fit=crop'); background-size:cover; color:#fff; }
+.hero h2 { font-size:2rem; margin-bottom:8px; text-shadow:0 2px 6px rgba(0,0,0,0.4); }
+
+/* main content (opcional) */
+.conteudo-pagina { max-width:1000px; margin: 24px auto; padding: 0 16px; }
+
+/* janelas (popups internas) */
+.janela {
+  display: none; /* escondidas por padrão */
+  position: fixed; inset: 0; /* top/right/bottom/left = 0 */
+  background: rgba(0,0,0,0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.conteudo-janela {
+  background: #fff; width: 100%; max-width: 720px; border-radius: 12px;
+  padding: 18px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  animation: aparecer .25s ease forwards;
+}
+
+@keyframes aparecer { from { transform: translateY(10px) scale(.98); opacity: 0 } to { transform: translateY(0) scale(1); opacity: 1 } }
+
+/* imagem da janela */
+.img-janela { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 14px; }
+
+/* botão fechar */
+.fechar {
+  position: absolute; right: 14px; top: 12px;
+  background: transparent; border: none; font-size: 26px; cursor: pointer; color: #333;
+}
+.fechar:hover { color: #b71c1c; }
+
+/* titulo / texto dentro da janela */
+.conteudo-janela h2 { color: #2e7d32; margin-bottom: 8px; }
+.conteudo-janela p { color: #333; }
+
+/* rodapé */
+footer { background:#2e7d32; color:#fff; text-align:center; padding:14px 10px; margin-top:24px; }
+
+/* responsivo */
+@media (max-width:420px){
+  .img-janela { height:150px; }
+  .conteudo-janela { padding:12px; }
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background: #eef8ee;
+}
+
+.card {
+  width: 200px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.icon {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+/* MODAIS */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  width: 450px;
+  padding: 20px;
+  border-radius: 15px;
+  animation: abrir 0.4s ease;
+}
+
+@keyframes abrir {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.close {
+  font-size: 28px;
+  float: right;
+  cursor: pointer;
+}
+
+.modal-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+/* FLYER */
+.flyer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.flyer-container img {
+  width: 90%;
+  max-width: 250px;
+  max-height: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+
+/* PODCAST */
+.podcast-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.podcast-container h2 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.podcast-container audio {
+  width: 100%;
+  margin-top: 10px;
+}
